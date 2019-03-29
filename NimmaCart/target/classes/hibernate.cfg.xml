@@ -14,5 +14,6 @@
 		<property name="connection.driver_class">org.h2.Driver</property>
 		<mapping class="com.training.poc.entity.User" />
 		<mapping class="com.training.poc.entity.Products" />
+		<mapping class="com.training.poc.entity.Cart" />
 	</session-factory>
 </hibernate-configuration>

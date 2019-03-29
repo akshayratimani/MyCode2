@@ -14,6 +14,8 @@
 </head>
 <body onload="fun()">
 
+${phno}
+
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <%@include file="./header.jsp"%>
 
 
@@ -39,8 +40,9 @@
 			</c:otherwise>
 		</c:choose>
 		<br> <br> <a href="" class="btn btn-default"
-			style="height: 35px; width: 7%; background-color: #B7950B;">Buy</a> <a
-			href="" class="btn btn-default"
+			style="height: 35px; width: 7%; background-color: #B7950B;">Buy</a> 
+			<a
+			href="/AddToCart?id=${f.id}&phoneno=${phno}" class="btn btn-default"
 			style="height: 35px; width: 7%; background-color: #B7950B;">Add
 			to Cart</a>
 

@@ -21,7 +21,7 @@ public class ProductDetailsController {
 	@RequestMapping(value="/ProductDetails",method=RequestMethod.GET)
 	public String getName(@RequestParam int id,ModelMap map) {
 		
-		System.out.println("ID:"+id);
+		//System.out.println("ID:"+id);
 		
 		List<Products> list = pds.getProductById(id);
 		map.put("list", list);

@@ -29,16 +29,16 @@ public class SignUpService {
 			session.save(u);
 			t.commit();
 		} catch (Exception e) {
-			System.out.println("Exception:"+e);
+			//System.out.println("Exception:"+e);
 			return false;
 		}
 		
-		System.out.println("Successfully saved");
+		//System.out.println("Successfully saved");
 		
 		factory.close();
 		session.close();
 
-		System.out.println(u);
+		//System.out.println(u);
 		
 		return true;
 	}

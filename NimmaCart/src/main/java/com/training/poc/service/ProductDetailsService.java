@@ -1,6 +1,6 @@
 package com.training.poc.service;
 
-import java.util.List;
+import java.util.List; 
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -31,7 +31,7 @@ public class ProductDetailsService {
 
 		List<Products> list = query.list();
 
-		System.out.println("HI:" + list.size());
+		//System.out.println("HI:" + list.size());
 
 		return list;
 		

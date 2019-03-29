@@ -1,4 +1,6 @@
 <%@include file="./header.jsp"%>
+
+
 <br>
 <div
 	style="height: 32 px; margin-right: 35px; margin-left: 35px; background-color: white">

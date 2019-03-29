@@ -31,7 +31,7 @@ public class ShowProductsService {
 		
 		List<Products> list = query.list();
 		
-		System.out.println("Size:"+list.size());
+		//System.out.println("Size:"+list.size());
 		
 		return list;
 		

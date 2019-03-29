@@ -1,7 +1,6 @@
 package com.training.poc.service;
 
-
-import java.util.ArrayList; 
+  
 import java.util.List;
 
 import org.hibernate.Session;
@@ -35,7 +34,7 @@ public class LoginService {
 		for(int i = 0; i < list.size(); i++) {
 			
 			u = (User) list.get(i);
-			System.out.println("Data\n"+u);
+			//System.out.println("Data\n"+u);
 			
 			if(u.getPhoneNumber().equals(phno)&&u.getPassword().equals(pass)) {
 				return true;
@@ -44,6 +43,7 @@ public class LoginService {
 		
 		t.commit();
 		session.close();
+		
 		
 		return false;
 	}

@@ -31,15 +31,38 @@
 </head>
 <body>
 
+
+
 	<div class="container-fluid"
 		style="height: 75px; background-color: #283747">
 		<font color=White size="6" face="MERRIWEATHER"> <label
 			style="position: absolute; bottom: 725px; left: 25px;">E-Kart</label></font>
 		<span
-			style="display: inline-block; height: 20px; width: 20px; background-color: #CA3C3C; border-width: 0px; border-style: groove; position: absolute; bottom: 760px; left: 1300px;"><font
-			color="White" size="2px"><b><center>0</center></b></font></span><a href="/login"
-			class="btn btn-default"
-			style="background-color: #B7950B; position: absolute; bottom: 735px; left: 1350px;">Login</a>
+			style="display: inline-block; height: 20px; width: 20px; background-color: #CA3C3C; border-width: 0px; border-style: groove; position: absolute; bottom: 760px; left: 1285px;"><font
+			color="White" size="2px"><b><center>
+			<c:choose>
+				<c:when test="${size == null}">
+					0
+				</c:when>
+				<c:otherwise>
+					${size}
+				</c:otherwise>
+			</c:choose></center></b></font></span>
+		<c:choose>
+			<c:when test="${phno != null}">
+				<a href="/logout" class="btn btn-default"
+					style="background-color: #B7950B; position: absolute; bottom: 735px; left: 1345px;">Logout</a>
+				<span
+					style="background-color: #E1E3E7; border-width: 1px; border-style: ridge; position: absolute; bottom: 675px; left: 1285px;"><font
+					color="#283747" size="2px"> <b><center>
+								Hello,<br>${name}</center> </b></font></span>
+			</c:when>
+			<c:otherwise>
+
+				<a href="/login" class="btn btn-default"
+					style="background-color: #B7950B; position: absolute; bottom: 735px; left: 1350px;">Login</a>
+			</c:otherwise>
+		</c:choose>
 		<div style="position: absolute; bottom: 735px; left: 250px;">
 			<form class="form-inline md-form mr-auto mb-4">
 				<input class="form-control mr-sm-2" type="text" placeholder="Search"
@@ -50,6 +73,9 @@
 		</div>
 	</div>
 
-	<img style="position: absolute; bottom: 725px; left: 1260px;"
+<a href="/cart">
+	<img style="position: absolute; bottom: 725px; left: 1245px;"
 		height="55px" width="55px" alt="Not found"
 		src="resources/images/carticon.png">
+		</a>
+		

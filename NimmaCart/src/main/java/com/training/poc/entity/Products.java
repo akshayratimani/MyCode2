@@ -1,6 +1,6 @@
 package com.training.poc.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.Entity; 
 import javax.persistence.Id;
 import javax.persistence.Table;
 
