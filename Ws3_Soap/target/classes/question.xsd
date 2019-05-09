@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="abc"
+targetNamespace="abc" elementFormDefault="qualified">
+ 
+    <xs:element name="getAnswerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="question" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:element name="getAnswerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QA" type="tns:QA"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="getDataRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="category" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:element name="getDataResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QA" type="tns:QA" minOccurs="1" maxOccurs="10" /> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="setDataRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QA" type="tns:QA" minOccurs="1" maxOccurs="10"  />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:element name="setDataResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string" /> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:complexType name="QA">
+        <xs:sequence>
+            <xs:element name="question" type="xs:string"/>
+            <xs:element name="answer" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="id" type="xs:int" />
+        </xs:sequence>
+    </xs:complexType>
+     
+</xs:schema>
